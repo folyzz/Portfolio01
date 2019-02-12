@@ -3,9 +3,14 @@
     src: url(../fonts/Cairo-Regular.ttf);
     font-family: ar-font;
 }
+
 body
 {
     font-family: ar-font;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 header
@@ -17,7 +22,7 @@ header
 }
 header .MainCard
 {
-    background-color: rgba(5, 117, 230, 0.5);
+    background-color: rgba(5, 118, 230, 0.671);
     color: #ffffff;
     transform: translateY(20%);
     padding: 3% 10%;
@@ -63,7 +68,7 @@ header .MainCard p
 {
     font-size: 18px;
     line-height: 30px;
-    color: #aed5ff;
+    color: #e2effd;
     margin-bottom: 40px;
 }
 header .MainCard > a 
@@ -104,6 +109,10 @@ nav.navbar.noTransparrent ul.navbar-nav li a.nav-link.active
 {
     color: #ffffff;
     background-color: #0575e6;
+}
+.navbar-toggler-icon
+{
+    color: white;
 }
 nav.navbar.noTransparrent button.navbar-toggler 
 {
@@ -477,7 +486,7 @@ section.contacts .overlay .testimonials .slider .carousel .carousel-control-prev
 }
 section.contacts .overlay .testimonials .slider .carousel .carousel-control-next
 {
-    transform: translate(-1335%, -20%);
+    transform: translate(-1360%, -20%);
 }
 /* تواصل معي */
 section.contacts .overlay .contact-info
@@ -589,12 +598,33 @@ section.contacts form .error
     color: rgba(255, 0, 0, 0.664)
 }
 
+@media (max-width: 1199px){
+    section.contacts .overlay .testimonials .slider .carousel .carousel-control-prev
+    {
+        transform: translate(1140%, -20%);
+    }
+
+    section.contacts .overlay .testimonials .slider .carousel .carousel-control-next
+    {
+        transform: translate(-1130%, -20%);
+    }
+
+}
 @media (max-width: 991px) {
     nav.navbar ul.navbar-nav li a.nav-link 
     {
         padding-right: 0.75rem;
         padding-left: 0.75rem;
     }
+    section.licence ul.timeline::before /*خط الأرزق*/
+    {
+        height: 78%;
+    }
+    section.contacts .overlay .testimonials .slider .carousel .carousel-item .carousel-caption
+    {
+        top: 50px;
+    }
+    
     section.contacts .overlay .testimonials .slider .carousel .carousel-item
     {
         min-height: 390px;
@@ -634,6 +664,24 @@ section.contacts form .error
         margin: 15px auto;
     }
 
+    section.gallery .work-gallery label
+    {
+        margin: 0;
+    }
+    section.contacts .overlay .testimonials .slider .carousel .carousel-item .carousel-caption {
+        top: 50px;
+        height: 340px;
+    }
+    section.contacts .overlay .testimonials .slider .carousel .carousel-indicators
+    {
+        bottom: -8px;
+    }
+    section.contacts .overlay .testimonials .slider .carousel .carousel-control-next {
+        transform: translate(-605%, -20%);
+    }
+    section.contacts .overlay .testimonials .slider .carousel .carousel-control-prev {
+        transform: translate(612%, -20%);
+    }
 
     /* section.licence */
     section.licence ul.timeline li .time-box 
@@ -651,5 +699,32 @@ section.contacts form .error
     section.licence ul.timeline:before
     {
         height: 90%;
+    }
+}
+
+@media (max-width: 575px){
+    section.contacts .overlay .testimonials .slider .carousel .carousel-control-next {
+        transform: translate(-662%, -20%);
+    }
+    section.contacts .overlay .testimonials .slider .carousel .carousel-control-prev {
+        transform: translate(660%, -20%);
+    }
+}
+@media (max-width: 420px){
+    section.contacts .overlay .testimonials .slider .carousel .carousel-control-next {
+        display: none;
+    }
+    section.contacts .overlay .testimonials .slider .carousel .carousel-control-prev {
+        display: none;
+    }
+    section.contacts .overlay .testimonials .slider .carousel .carousel-indicators li {
+        max-width: 35px;
+        height: 35px;
+    }
+    section.contacts .overlay .testimonials .slider .carousel .carousel-indicators {
+        bottom: -40px;
+    }
+    section.contacts .overlay .testimonials .slider {
+        width: 100%;
     }
 }
